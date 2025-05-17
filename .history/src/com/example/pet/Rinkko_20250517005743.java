@@ -51,14 +51,14 @@ public class Rinkko {
     }
 
     public String getStatus(){
-        return String.format("[凛喵喵名]: %s,饱食度:%d/%d,口渴度:%d/%d,心情:%d/%d,健康,%d/%d,好感度:%d/%d]",
+        return String.format("[凛喵喵名]: s%，饱食度：%d%d,口渴度：%d%d,心情：%d%d,健康：%d%d，好感度：%d%d]",
         name,hunger,MAX_STAT_VALUE,thirst,MAX_STAT_VALUE,mood,MAX_STAT_VALUE,health,MAX_STAT_VALUE,affection,MAX_STAT_VALUE);
     }
 
 	public static void main(String[] args) {
         Rinkko rinkko = new Rinkko();
-        System.out.println("新喵喵状态：");
-        System.out.println(rinkko.getStatus());
+      System.out.println("新喵喵状态：");
+      System.out.println(rinkko.getStatus());
 	}
 
 

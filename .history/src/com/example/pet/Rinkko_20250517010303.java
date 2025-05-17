@@ -57,8 +57,8 @@ public class Rinkko {
 
 	public static void main(String[] args) {
         Rinkko rinkko = new Rinkko();
-        System.out.println("新喵喵状态：");
-        System.out.println(rinkko.getStatus());
+      System.out.println("新喵喵状态：");
+      System.out.println(rinkko.getStatus());
 	}
 
 

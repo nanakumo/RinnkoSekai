@@ -15,7 +15,7 @@ public class Rinkko {
     public static final int MIN_STAT_VALUE = 0;
 
     // 创建构造函数（初始化字段
-    public Rinkko( ){
+    public Rinkko(String name ){
         this.name = "Rinkko";
         this.hunger = 80;
         this.thirst = 80;
@@ -51,14 +51,18 @@ public class Rinkko {
     }
 
     public String getStatus(){
-        return String.format("[凛喵喵名]: %s,饱食度:%d/%d,口渴度:%d/%d,心情:%d/%d,健康,%d/%d,好感度:%d/%d]",
-        name,hunger,MAX_STAT_VALUE,thirst,MAX_STAT_VALUE,mood,MAX_STAT_VALUE,health,MAX_STAT_VALUE,affection,MAX_STAT_VALUE);
+        return
     }
 
 	public static void main(String[] args) {
         Rinkko rinkko = new Rinkko();
-        System.out.println("新喵喵状态：");
-        System.out.println(rinkko.getStatus());
+        System.out.print("凛喵喵名:" + rinkko.getName( ) + "/" + MAX_STAT_VALUE);
+        System.out.print("，饱食度:" + rinkko.getHunger( )+ "/" + MAX_STAT_VALUE);
+        System.out.print("，口渴度:" + rinkko.getThirst( )+ "/" + MAX_STAT_VALUE);
+        System.out.print("，健康:" + rinkko.getHealth( )+ "/" + MAX_STAT_VALUE);
+        System.out.print("，好感度: " + rinkko.getAffection( )+ "/" + MAX_STAT_VALUE);
+        // 换行
+        System.out.println() ;
 	}
 
 
