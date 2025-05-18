@@ -81,6 +81,13 @@ public class Player {
         }
     }
 
+
+    // 测试类
+    public static void main(String[] args) {
+        
+    }
+
+
 }
 
 

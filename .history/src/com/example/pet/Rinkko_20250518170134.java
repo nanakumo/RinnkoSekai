@@ -82,19 +82,6 @@ public static void main(String[] args) {
     Rinkko rinkko = new Rinkko();
     System.out.println("新喵喵状态：");
     System.out.println(rinkko.getStatus());
-
-    // 测试状态调整方法
-
-rinkko.changeHunger(-30);
-rinkko.changeThirst(15);
-rinkko.changeMood(-50);
-rinkko.changeHealth(-10);
-rinkko.changeAffection(1314490);
-
-// 状态调整后
-
-System.out.println("状态调整后：");
-System.out.println(rinkko.getStatus());
 }
 
 

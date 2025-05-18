@@ -81,6 +81,15 @@ public class Player {
         }
     }
 
+
+    // 测试类
+    public static void main(String[] args) {
+        // 创建一个凛喵喵
+        Player rinkko = new Player();
+        System.out.println("玩家当前金币：" + Player.getMoney);
+    }
+
+
 }
 
 

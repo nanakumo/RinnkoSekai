@@ -7,7 +7,7 @@ import com.example.pet.Rinkko;
 public class Player {
     public static void main(String[] args) {
 
-
+        
     }
 
     //创建字段
@@ -82,6 +82,4 @@ public class Player {
     }
 
 }
-
-
 

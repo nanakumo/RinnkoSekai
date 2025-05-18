@@ -88,8 +88,8 @@ public static void main(String[] args) {
 rinkko.changeHunger(-30);
 rinkko.changeThirst(15);
 rinkko.changeMood(-50);
-rinkko.changeHealth(-10);
-rinkko.changeAffection(1314490);
+rinkko.changeHealth(-100);
+rinkko.changeAffection(200);
 
 // 状态调整后
 

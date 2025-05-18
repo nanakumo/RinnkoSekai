@@ -6,11 +6,7 @@ import com.example.pet.Rinkko;
 // 创建类
 public class Player {
     public static void main(String[] args) {
-
-
-    }
-
-    //创建字段
+         //创建字段
     private int money = 500;
     private ArrayList<Rinkko> pets;
 
@@ -79,9 +75,9 @@ public class Player {
                 System.out.println((i + 1) + "." + pets.get(i));
             }
         }
+
     }
 
+
 }
-
-
 

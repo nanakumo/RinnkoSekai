@@ -89,7 +89,7 @@ rinkko.changeHunger(-30);
 rinkko.changeThirst(15);
 rinkko.changeMood(-50);
 rinkko.changeHealth(-10);
-rinkko.changeAffection(1314490);
+rinkko.changeAffection(1);
 
 // 状态调整后
 

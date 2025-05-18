@@ -7,10 +7,7 @@ import com.example.pet.Rinkko;
 public class Player {
     public static void main(String[] args) {
 
-
-    }
-
-    //创建字段
+         //创建字段
     private int money = 500;
     private ArrayList<Rinkko> pets;
 
@@ -81,7 +78,10 @@ public class Player {
         }
     }
 
+
+
+    }
+
+
 }
-
-
 

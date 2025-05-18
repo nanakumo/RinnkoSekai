@@ -81,6 +81,14 @@ public class Player {
         }
     }
 
+
+    // 测试类
+    public static void main(String[] args) {
+        // 创建一个凛喵喵
+        Player 
+    }
+
+
 }
 
 

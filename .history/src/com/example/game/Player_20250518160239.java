@@ -5,10 +5,7 @@ import com.example.pet.Rinkko;
 
 // 创建类
 public class Player {
-    public static void main(String[] args) {
-
-
-    }
+    pu
 
     //创建字段
     private int money = 500;
@@ -82,6 +79,4 @@ public class Player {
     }
 
 }
-
-
 

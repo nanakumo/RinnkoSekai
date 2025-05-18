@@ -83,5 +83,39 @@ public class Player {
 
 }
 
+// 测试类
+
+public static void main(String[] args) {
+    // 创建一个玩家对象
+    Player player = new Player();
+    System.out.println("玩家当前金币：" + player.getMoney());
+
+    // 创建并添加一只凛喵喵
+    Rinkko rinkko = new Rinkko();
+    player.addPet(rinkko);
+    System.out.println("你获得了一只新的凛喵喵！");
+
+    // 显示凛喵喵列表
+    player.listPets();
+
+    // 增加金币
+    player.addMoney(200);
+    System.out.println("玩家金币增加后：" + player.getMoney());
+
+    // 花费金币
+    boolean success = player.spendMoney(100);
+    if (success) {
+        System.out.println("成功花费 100 金币。");
+    } else {
+        System.out.println("金币不足。");
+    }
+
+    // 搜索凛喵喵
+    Rinkko foundPet = player.getPetByName("Rinkko");
+    if (foundPet != null) {
+        System.out.println("找到你的凛喵喵：" + foundPet.getStatus());
+    } else {
+        System.out.println("没有找到此名字的凛喵喵。");
+    }
 
 
