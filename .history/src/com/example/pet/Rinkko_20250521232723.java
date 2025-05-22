@@ -186,18 +186,18 @@ public static void main(String[] args) {
     System.out.println("新喵喵状态：");
     System.out.println(rinkko.getStatus());
 
-//     // 测试状态调整方法
+    // 测试状态调整方法
 
-// rinkko.changeHunger(-30);
-// rinkko.changeThirst(15);
-// rinkko.changeMood(-50);
-// rinkko.changeHealth(-10);
-// rinkko.changeAffection(1314490);
+rinkko.changeHunger(-30);
+rinkko.changeThirst(15);
+rinkko.changeMood(-50);
+rinkko.changeHealth(-10);
+rinkko.changeAffection(1314490);
 
-// // 状态调整后
+// 状态调整后
 
-// System.out.println("状态调整后：");
-// System.out.println(rinkko.getStatus());
+System.out.println("状态调整后：");
+System.out.println(rinkko.getStatus());
 
 //Debuff测试
 System.out.println("--- 游戏开始：Debuff 测试 ---");

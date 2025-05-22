@@ -11,7 +11,7 @@ public class Player {
     }
 
     //创建字段
-    private int money;
+    private int money = 500;
     private ArrayList<Rinkko> pets;
 
 
@@ -82,7 +82,7 @@ public class Player {
         } else {
             System.out.println("这是你的凛喵喵，请查收：");
             for(int i = 0; i < pets.size(); i++){
-                System.out.println((i + 1) + "." + pets.get(i).getStatus());
+                System.out.println((i + 1) + "." + pets.get(i));
             }
         }
     }

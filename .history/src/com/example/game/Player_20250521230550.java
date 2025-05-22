@@ -11,7 +11,7 @@ public class Player {
     }
 
     //创建字段
-    private int money;
+    private int money = 500;
     private ArrayList<Rinkko> pets;
 
 

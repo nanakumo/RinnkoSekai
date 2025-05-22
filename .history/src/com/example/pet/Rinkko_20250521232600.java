@@ -108,7 +108,7 @@ public class Rinkko {
     }
 
     // 返回Debuff状态描述
-    public String getdebuffStatusMessage(){
+    public String getDebuffStatusMessage(){
         if (currentDebuff != DebuffType.NONE) {
             return String.format("[负面状态: %s, 剩余: %d 回合]",
             currentDebuff.getDescription(), DebuffTurnLeft);
@@ -171,9 +171,9 @@ public void clearDebuff(DebuffType typeToClear) {
     String status = String.format("[凛喵喵名]:%s, 饱食度: %d/%d, 口渴度: %d/%d, 心情: %d/%d, 健康: %d/%d, 好感度: %d/%d]",
     name,hunger,MAX_STAT_VALUE,thirst,MAX_STAT_VALUE,mood,MAX_STAT_VALUE,health,MAX_STAT_VALUE,affection,MAX_STAT_VALUE);
 
-    String debuffStatusMessage = getdebuffStatusMessage();
-    if (!debuffStatusMessage.isEmpty()) {
-        status += debuffStatusMessage;
+    String DebuffStatusMessage = getDebuffStatusMessage();
+    if (!DebuffStatusMessage.isEmpty()) {
+        status += DebuffStatusMessage;
     }
     return status;
 
@@ -186,18 +186,18 @@ public static void main(String[] args) {
     System.out.println("新喵喵状态：");
     System.out.println(rinkko.getStatus());
 
-//     // 测试状态调整方法
+    // 测试状态调整方法
 
-// rinkko.changeHunger(-30);
-// rinkko.changeThirst(15);
-// rinkko.changeMood(-50);
-// rinkko.changeHealth(-10);
-// rinkko.changeAffection(1314490);
+rinkko.changeHunger(-30);
+rinkko.changeThirst(15);
+rinkko.changeMood(-50);
+rinkko.changeHealth(-10);
+rinkko.changeAffection(1314490);
 
-// // 状态调整后
+// 状态调整后
 
-// System.out.println("状态调整后：");
-// System.out.println(rinkko.getStatus());
+System.out.println("状态调整后：");
+System.out.println(rinkko.getStatus());
 
 //Debuff测试
 System.out.println("--- 游戏开始：Debuff 测试 ---");
