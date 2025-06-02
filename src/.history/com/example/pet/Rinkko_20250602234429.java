@@ -166,6 +166,7 @@ public void clearDebuff(DebuffType typeToClear) {
     }
 }
 
+<<<<<<< HEAD
 // 吃食物方法
 public void eat(com.example.Item.FoodItem food){
     changeHunger(food.getHungerBoost());
@@ -189,6 +190,8 @@ public void drink(com.example.Item.DrinkItem drink){
 }
 
 
+=======
+>>>>>>> 7f5ab5b2aa0d42a6b0d6236287412845a23bfb5a
 
 
 // 获取凛喵喵状态
@@ -204,8 +207,11 @@ public void drink(com.example.Item.DrinkItem drink){
 
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7f5ab5b2aa0d42a6b0d6236287412845a23bfb5a
 public static void main(String[] args) {
     Rinkko rinkko = new Rinkko();
     rinkko.setName("可爱凛喵喵");
@@ -213,6 +219,10 @@ public static void main(String[] args) {
     System.out.println("新喵喵状态：");
     System.out.println(rinkko.getStatus());
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7f5ab5b2aa0d42a6b0d6236287412845a23bfb5a
 //     // 测试状态调整方法
 
 // rinkko.changeHunger(-30);
@@ -241,4 +251,8 @@ for(int i = 0; i < 10;i++){
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7f5ab5b2aa0d42a6b0d6236287412845a23bfb5a

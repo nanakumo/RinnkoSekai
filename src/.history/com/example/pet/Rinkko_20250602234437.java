@@ -213,6 +213,10 @@ public static void main(String[] args) {
     System.out.println("新喵喵状态：");
     System.out.println(rinkko.getStatus());
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7f5ab5b2aa0d42a6b0d6236287412845a23bfb5a
 //     // 测试状态调整方法
 
 // rinkko.changeHunger(-30);
@@ -241,4 +245,8 @@ for(int i = 0; i < 10;i++){
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7f5ab5b2aa0d42a6b0d6236287412845a23bfb5a

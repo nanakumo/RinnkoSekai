@@ -24,6 +24,7 @@ public class Game {
         this.player = new Player();
         this.scanner =new Scanner(System.in);
         this.random = new Random();
+<<<<<<< HEAD
 
             // 初始化食物列表
         this.availableFoods = new ArrayList<>();
@@ -108,6 +109,20 @@ public class Game {
         }
     }
 
+=======
+    }
+
+        // 前往下一关
+        private void nextLevel(){
+            if(currentLevel < maxLevel){
+                currentLevel ++;
+                System.out.println("正在前往下一关，现在是第" + currentLevel + "关。");
+            } else {
+                System.out.println("恭喜你已通过所有关卡，接下来就和所有凛喵喵们一起共度余生吧！");
+            }
+        }
+
+>>>>>>> 7f5ab5b2aa0d42a6b0d6236287412845a23bfb5a
     // 游戏启动
     public void start(){
         System.out.println("欢迎来到凛喵喵的世界！");
@@ -172,5 +187,8 @@ public class Game {
         game.start();
     }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7f5ab5b2aa0d42a6b0d6236287412845a23bfb5a
