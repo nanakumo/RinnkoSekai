@@ -204,6 +204,43 @@ public void drink(com.example.Item.DrinkItem drink){
 
 }
 
+// 和凛喵喵玩耍方法
+public viod playWith(PlayActivityItem activity){
+    changeMood(activity.getMoodBoost());
+    changeAffection(activity.getAffectionBoost());
+    changeHunger(activity.getHungerBoost());
+
+    if (debuffs.contains(DebuffType.UNHAPPY)) {
+        clearDebuff(DebuffType.UNHAPPY);
+    }
+
+    System.out.println(name + "开心地参加了「" + activity.getName() + "」活动，心情和好感都提升了！");
+}
+
+// 吃药治疗方法
+
+public void takeMedicine(MedicineItem medicine){
+    changeHealth(medicine.getHealthBoost());
+    changeMood(medicine.getMoodBoost());
+
+    if (debuffs.contains(DebuffType.SICK)) {
+        clearDebuff(DebuffType.SICK);
+    }
+
+    System.out.println(name + "吃下了「" + medicine.getName() + "」感觉身体好多了，但好像不是很开心…");
+}
+
+// 工作方法
+ public int work(){
+    int earned = new java.util.Random().nextInt(31) + 20;
+    changeHunger(-15);
+    changeThirst(-10);
+    changeMood(-10);
+
+    System.out.println(name + "努力工作，为你赚取了" + earned + "金币！但他看起来有点累了。");
+
+    return earned;
+ }
 
 
 public static void main(String[] args) {

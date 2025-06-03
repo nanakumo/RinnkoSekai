@@ -17,7 +17,9 @@ public class Game {
   // 喝水吃饭
     private List<FoodItem> availableFoods;
     private List<DrinkItem> availableDrinks;
-
+    //玩耍吃药的字段
+    private List<PlayActivityItem> availablePlayActivities;
+    private List<MedicineItem> availableMedicines;
 
     // 构造方法
     public Game(){
@@ -37,9 +39,9 @@ public class Game {
     }
 
     // 添加通过辅助方法
-    private <T extends MenuItem> T selectItemFromMenu(List<T> items, String prompt){
-        System.out.println(prompt);
-        for(int i = 0; i < items.size(); i++){
+         private <T extends MenuItem> T selectItemFromMenu(List<T> items, String prompt){
+         System.out.println(prompt);
+         for(int i = 0; i < items.size(); i++){
             T item = items.get(i);
             System.out.println((i + 1) + ". " + item.getName() + " (" + item.getDescription() + ")");
         }
@@ -60,6 +62,57 @@ public class Game {
         } else {
             return items.get(choice - 1);
         }
+
+        // 游戏和吃药
+        availablePlayActivities = new ArrayList<>();
+        availablePlayActivities.add(new PlayActivityItem("打游戏", 15, 30, 10, -5));
+        availablePlayActivities.add(new PlayActivityItem("瑟瑟", 20, 40, 15, -8));
+
+        availableMedicines = new ArrayList<>();
+        availableMedicines.add(new MedicineItem("普通感冒药", 50, 40, -5));
+        availableMedicines.add(new MedicineItem("特效活力药水", 80, 70, -10));
+    }
+
+    // handleWorkAction
+    public boolean handlePlayAction(Rinkko pet){
+        PlayActivityItem activity = selectItemFromMenu(availablePlayActivities, "请选择一项陪玩的活动：");
+
+        if (activity == null) {
+            return false;
+        }
+
+        if (player.getMoney() < activity.getCost()) {
+            System.out.println("你没有足够的金币来来进行这个活动！");
+        } else {
+            player.spendMoney(activity.getCost());
+            pet.playWith(activity);
+        }
+
+        return  true;
+    }
+
+    // handleTreatAction
+    public boolean handleTreatAction(Rinkko pet){
+        MedicineItem medicine = selectItemFromMenu(availableMedicines, "请选择要使用的药品：");
+         if (medicine == null) {
+            return false;
+         }
+
+         if (player.getMoney() < medicine.getCost()) {
+            System.out.println("你没有足够的金币来买药！");
+         } else {
+            player.spendMoney(medicine.getCost());
+            pet.takeMedicine(medicine);
+         }
+
+         return true;
+    }
+
+    // handleWorkAction
+    public boolean handleWorkAction(Rinkko pet){
+        int earned = pet.work();
+        player.addMoney(earned);
+        return true;
     }
 
     // 新增玩家动作方法
@@ -172,5 +225,3 @@ public class Game {
         game.start();
     }
 }
-
-
